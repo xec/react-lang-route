@@ -3,6 +3,14 @@ body {
   color: grey;
   font-family: sans-serif;
 }
+
+a {
+  color: rgb(66, 80, 255);
+}
+a:visited {
+  color: rgb(176, 90, 255);
+}
+
 .mainNav {
   display: flex;
 }
