@@ -3,3 +3,4 @@ npm init -y
 npm i react react-dom
 npm i -D standard
 npm i parcel -g
+npm i @reach/router
