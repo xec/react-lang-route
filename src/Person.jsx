@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-const Person = ({ children }) => <div>{children}</div>
-
 const PersonIndex = () => (
   <div>
     <h2>People:</h2>
@@ -13,7 +11,7 @@ const PersonIndex = () => (
   </div>
 )
 
-const PersonDetails = ({ username }) => (
+const Person = ({ username }) => (
   <div>
     <h2>Details page for {username}</h2>
   </div>
@@ -21,6 +19,5 @@ const PersonDetails = ({ username }) => (
 
 export {
   Person,
-  PersonIndex,
-  PersonDetails
+  PersonIndex
 }
