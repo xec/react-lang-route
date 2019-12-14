@@ -5,3 +5,5 @@ npm i -D standard
 npm i parcel -g
 npm i @reach/router
 npm i i18next react-i18next
+git remote add origin https://github.com/xec/react-lang-route.git
+git push -u origin master
