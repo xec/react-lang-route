@@ -1,0 +1,16 @@
+#mainNav {
+  display: flex;
+}
+#mainNav > a {
+  flex: 1;
+  margin: 1rem;
+  padding: .3rem;
+  text-decoration: none;
+  color: white;
+  border-radius: .2rem;
+  text-align: center;
+  background-color: #505050;
+}
+#mainNav > a:hover {
+  background-color: gray;
+}
