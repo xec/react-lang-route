@@ -14,3 +14,6 @@
 #mainNav > a:hover {
   background-color: gray;
 }
+#mainNav > a[aria-current] {
+  font-weight: bold;
+}

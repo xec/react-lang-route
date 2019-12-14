@@ -1,11 +1,8 @@
 import React from 'react'
 import { Router, Redirect, redirectTo } from '@reach/router'
+import { defaultLang, replaceLang, supportedLangs } from '../lib/lang'
 import PersonPage from './Person'
 import Nav from './Nav'
-import replaceLang from '../functions/replaceLang'
-
-const defaultLang = 'en-gb'
-const supportedLangRegEx = /^(en|nb)(-[\w]{2})?$/i
 
 export default function App () {
   return (
@@ -21,15 +18,19 @@ export default function App () {
 
 const Root = ({ lang, children, location }) => {
   const url = location.pathname
+
   // only support "en" or "no" for lang code.
   // if no match, redirect to same location we're at,
   // except ":lang" part is replaced with defaultLang
-  if (!supportedLangRegEx.test(lang)) {
+  if (!supportedLangs.includes(lang.toLowerCase())) {
     redirectTo(replaceLang(url, defaultLang))
   }
+
+  // todo: set current language for translation tool?
+
   return (
     <div>
-      <Nav url={url} />
+      <Nav currentUrl={url} />
       <p>current language: {lang}</p>
       {children}
     </div>
