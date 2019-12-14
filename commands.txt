@@ -4,3 +4,4 @@ npm i react react-dom
 npm i -D standard
 npm i parcel -g
 npm i @reach/router
+npm i i18next react-i18next
