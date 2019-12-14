@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
-import { Router, Redirect, redirectTo } from '@reach/router'
+import { Router, Redirect, navigate } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 import { defaultLang, replaceLang, supportedLangs } from '../lib/lang'
 import PersonPage from './Person'
 import Nav from './Nav'
+
+// todo: get default lang for the logged in user account Active Directory field
 
 export default function App () {
   return (
@@ -18,7 +20,7 @@ export default function App () {
 }
 
 function Root ({ lang, children, location }) {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
   const url = location.pathname
 
   useEffect(() => {
@@ -26,7 +28,8 @@ function Root ({ lang, children, location }) {
     // if no match, redirect to same location we're at,
     // except ":lang" part is replaced with defaultLang
     if (!supportedLangs.includes(lang.toLowerCase())) {
-      redirectTo(replaceLang(url, defaultLang))
+      navigate(replaceLang(url, defaultLang))
+      return
     }
     // set current language for translation tool
     i18n.changeLanguage(lang)
@@ -35,7 +38,6 @@ function Root ({ lang, children, location }) {
   return (
     <div>
       <Nav currentUrl={url} />
-      <p>{t('Current language')}: {lang}</p>
       {children}
     </div>
   )
