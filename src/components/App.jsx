@@ -3,6 +3,7 @@ import { Router, Redirect, navigate } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 import { defaultLang, replaceLang, supportedLangs } from '../lib/lang'
 import PersonPage from './Person'
+import TextPage from './TextPage'
 import Nav from './Nav'
 
 // todo: get default lang for the logged in user account Active Directory field
@@ -14,6 +15,7 @@ export default function App () {
       <Root path=':lang'>
         <Home path='/' />
         <PersonPage path='person/*' />
+        <TextPage path='text/*' />
       </Root>
     </Router>
   )

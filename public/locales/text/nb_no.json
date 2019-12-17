@@ -1,0 +1,20 @@
+{
+  "key": "verdi",
+  "keyContext_female": "hunkjønn",
+  "keyContext_male": "hankjønn",
+  "keyDeep": {
+    "inner": "verdi"
+  },
+  "keyInterpolate": "erstatt {{value}}",
+  "keyInterpolateUnescaped": "erstatt {{- value}}",
+  "keyInterpolateWithFormatting": "erstatt {{value, format}}",
+  "keyNesting": "bruk $t(keyDeep.inner) om igjen",
+  "keyPluralMultipleEgArabic_0": "flertall form 0",
+  "keyPluralMultipleEgArabic_1": "flertall form 1",
+  "keyPluralMultipleEgArabic_2": "flertall form 2",
+  "keyPluralMultipleEgArabic_3": "flertall form 3",
+  "keyPluralMultipleEgArabic_4": "flertall form 4",
+  "keyPluralMultipleEgArabic_5": "flertall form 5",
+  "keyPluralSimple": "enkelttall",
+  "keyPluralSimple_plural": "flertall"
+}

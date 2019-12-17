@@ -10,8 +10,9 @@ export default function Nav ({ currentUrl }) {
     <nav id='mainNav'>
       <Link to='./'>{t('Home')}</Link>
       <Link to='person'>{t('People')}</Link>
-      <Link to={replaceLang(currentUrl, 'en-gb')}>English</Link>
-      <Link to={replaceLang(currentUrl, 'nb-no')}>Norwegian</Link>
+      <Link to='text'>{t('Text')}</Link>
+      <Link to={replaceLang(currentUrl, 'en-gb')}>{t('English')}</Link>
+      <Link to={replaceLang(currentUrl, 'nb-no')}>{t('Norwegian')}</Link>
     </nav>
   )
 }

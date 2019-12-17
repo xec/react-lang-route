@@ -1,0 +1,20 @@
+{
+  "key": "value",
+  "keyContext_female": "the female variant",
+  "keyContext_male": "the male variant",
+  "keyDeep": {
+    "inner": "value"
+  },
+  "keyInterpolate": "replace this {{value}}",
+  "keyInterpolateUnescaped": "replace this {{- value}}",
+  "keyInterpolateWithFormatting": "replace this {{value, format}}",
+  "keyNesting": "reuse $t(keyDeep.inner)",
+  "keyPluralMultipleEgArabic_0": "the plural form 0",
+  "keyPluralMultipleEgArabic_1": "the plural form 1",
+  "keyPluralMultipleEgArabic_2": "the plural form 2",
+  "keyPluralMultipleEgArabic_3": "the plural form 3",
+  "keyPluralMultipleEgArabic_4": "the plural form 4",
+  "keyPluralMultipleEgArabic_5": "the plural form 5",
+  "keyPluralSimple": "the singular",
+  "keyPluralSimple_plural": "the plural"
+}
