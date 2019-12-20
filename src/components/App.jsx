@@ -13,6 +13,7 @@ export default function App () {
     <Router>
       <Redirect from='/' to={'/' + defaultLang} noThrow />
       <Root path=':lang'>
+        <NotFound default />
         <Home path='/' />
         <PersonPage path='person/*' />
         <TextPage path='text/*' />
@@ -49,3 +50,5 @@ const Home = () => {
   const { t } = useTranslation()
   return <h2>{t('Home')}</h2>
 }
+
+const NotFound = () => <p className='errorMessage'>No page found matching the address</p>
