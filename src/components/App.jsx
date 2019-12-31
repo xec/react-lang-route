@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { Router, Redirect, navigate } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 import { defaultLang, replaceLang, supportedLangs } from '../lib/lang'
@@ -44,6 +45,10 @@ function Root ({ lang, children, location }) {
       {children}
     </div>
   )
+}
+
+Root.propTypes = {
+  lang: PropTypes.string
 }
 
 const Home = () => {

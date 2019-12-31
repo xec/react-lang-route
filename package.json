@@ -20,6 +20,7 @@
     "react-i18next": "^11.2.6"
   },
   "devDependencies": {
+    "prop-types": "^15.7.2",
     "standard": "^14.3.1"
   }
 }

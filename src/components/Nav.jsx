@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 import { replaceLang } from '../lib/lang'
@@ -15,4 +16,8 @@ export default function Nav ({ currentUrl }) {
       <Link to={replaceLang(currentUrl, 'nb-no')}>{t('Norwegian')}</Link>
     </nav>
   )
+}
+
+Nav.propTypes = {
+  currentUrl: PropTypes.string.isRequired
 }

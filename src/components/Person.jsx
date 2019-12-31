@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Router, Link } from '@reach/router'
 import { useTranslation } from 'react-i18next'
 
-export default function PersonPage () {
+function PersonPage () {
   return (
     <Router>
       <PersonIndex path='/' />
@@ -11,7 +12,7 @@ export default function PersonPage () {
   )
 }
 
-const PersonIndex = () => {
+function PersonIndex () {
   const { t } = useTranslation()
   return (
     <div>
@@ -20,11 +21,15 @@ const PersonIndex = () => {
         <li><Link to='sam'>Sam</Link></li>
         <li><Link to='bob'>Bob</Link></li>
       </ul>
+      {/* should be fine */}
+      <Person username='Some username' />
+      {/* should throw error mecause username is missing */}
+      <Person />
     </div>
   )
 }
 
-const Person = ({ username }) => {
+function Person ({ username }) {
   const { t } = useTranslation()
   return (
     <div>
@@ -32,3 +37,8 @@ const Person = ({ username }) => {
     </div>
   )
 }
+Person.propTypes = {
+  username: PropTypes.string.isRequired
+}
+
+export { PersonPage as default, PersonIndex, Person }
