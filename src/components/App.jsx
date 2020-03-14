@@ -26,7 +26,7 @@ export default function App () {
 function Root ({ lang, children, location }) {
   const { i18n } = useTranslation()
   const url = location.pathname
-
+ 
   useEffect(() => {
     // only support "en-gb" or "nb-no" for lang code.
     // if no match, redirect to same location we're at,
